@@ -61,11 +61,11 @@
                   </GridPane>
                   <HBox layoutX="242.0" layoutY="259.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" text="New" />
+                        <Button mnemonicParsing="false" onAction="#handleNewPerson" prefHeight="25.0" prefWidth="44.0" text="New" />
                         <Label text="  " />
-                        <Button lineSpacing="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="43.0" text="Edit" />
+                        <Button lineSpacing="2.0" mnemonicParsing="false" onAction="#handleEditPerson" prefHeight="25.0" prefWidth="43.0" text="Edit" />
                         <Label text="  " />
-                        <Button lineSpacing="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Delete" />
+                        <Button lineSpacing="2.0" mnemonicParsing="false" onAction="#handleDeletePerson" prefHeight="25.0" prefWidth="55.0" text="Delete" />
                      </children>
                   </HBox>
                </children>
