@@ -41,7 +41,33 @@ public class PersonOverviewController {
     /**
      * Initializes the controller class. This method is automatically called
      * after the fxml file has been loaded.
-     */
+    /**
+ * Fills all text fields to show details about the person.
+ * If the specified person is null, all text fields are cleared.
+ * 
+ * @param person the person or null
+ */
+    private void showPersonDetails(Person person) {
+        if (person != null) {
+            // Fill the labels with info from the person object.
+            firstNameLabel.setText(person.getFirstName());
+            lastNameLabel.setText(person.getLastName());
+            streetLabel.setText(person.getStreet());
+            postalCodeLabel.setText(Integer.toString(person.getPostalCode()));
+            cityLabel.setText(person.getCity());
+
+        // TODO: We need a way to convert the birthday into a String! 
+        // birthdayLabel.setText(...);
+        } else {
+            // Person is null, remove all the text.
+            firstNameLabel.setText("");
+            lastNameLabel.setText("");
+            streetLabel.setText("");
+            postalCodeLabel.setText("");
+            cityLabel.setText("");
+            birthdayLabel.setText("");
+        }
+    }
     @FXML
     private void initialize() {
     	// Initialize the person table with the two columns.
